@@ -156,6 +156,21 @@
     .btn { display: inline-block; padding: 10px 18px; background: var(--accent); color: #fff !important; text-decoration: none; border-radius: var(--radius); font-weight: 600; font-size: 14px; letter-spacing: 0.2px; border: 1px solid var(--accent); transition: background 0.15s ease; }
     .btn:hover { background: var(--accent-soft); border-color: var(--accent-soft); color: #fff !important; }
 
+    .peace { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+    .peace .step { padding: 18px 16px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; min-height: 110px; }
+    .peace .step:last-child { border-right: 0; }
+    .peace .step .tag { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+    .peace .step .line { font-family: 'Source Serif 4', Georgia, serif; font-size: 15px; line-height: 1.35; color: var(--ink); font-weight: 600; letter-spacing: -0.01em; }
+    @media (max-width: 720px) {
+      .peace { grid-template-columns: 1fr; }
+      .peace .step { border-right: 0; border-bottom: 1px solid var(--line); min-height: auto; }
+      .peace .step:last-child { border-bottom: 0; }
+    }
+    @media print {
+      .peace .step { padding: 10px 12px; min-height: auto; }
+      .peace .step .line { font-size: 11pt; }
+    }
+
     footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--ink-3); display: flex; flex-direction: column; gap: 6px; }
     footer .row { display: flex; flex-wrap: wrap; gap: 14px; }
     footer code { font-size: 11.5px; background: transparent; padding: 0; color: var(--ink-3); }
@@ -201,11 +216,34 @@
     <header class="hero">
       <div class="top-row">
         <span class="meta">Ground UP GmbH &middot; Investor One-Pager &middot; April 2026</span>
-        <span class="pill gold">Soil Organic Matter Matters</span>
+        <span class="pill gold">Soil as Capital</span>
       </div>
       <h1>Sie investieren in Boden, der jedes Jahr mehr wert wird.</h1>
-      <p class="lead">Lebendiger Boden ist die einzige Bilanzposition, die ein Hof selbst aufbaut. Wir machen ihn messbar, bewirtschaftbar und verk&auml;uflich &mdash; in dieser Reihenfolge. Und wir geben Landwirten dabei ihren Boden zur&uuml;ck.</p>
+      <p class="lead">Lebendiger Boden ist die einzige Bilanzposition, die ein Hof selbst aufbaut. Wir machen ihn messbar, bewirtschaftbar und verk&auml;uflich &mdash; und bauen daraus eine neue Anlageklasse f&uuml;r Europa.</p>
     </header>
+
+    <section class="peace" aria-label="F&uuml;nf Stufen: Die Geschichte in einem Atemzug">
+      <div class="step">
+        <span class="tag">Problem</span>
+        <span class="line">Boden tr&auml;gt Europa. Niemand bilanziert ihn.</span>
+      </div>
+      <div class="step">
+        <span class="tag">Empathie</span>
+        <span class="line">Wer die Welt ern&auml;hrt, sollte nicht der Bittsteller sein.</span>
+      </div>
+      <div class="step">
+        <span class="tag">Antwort</span>
+        <span class="line">Ground UP macht lebendigen Boden messbar, bewirtschaftbar und verk&auml;uflich.</span>
+      </div>
+      <div class="step">
+        <span class="tag">Wandel</span>
+        <span class="line">Sie investieren in eine Anlage, die ein Hof selbst aufbaut.</span>
+      </div>
+      <div class="step">
+        <span class="tag">Ergebnis</span>
+        <span class="line">B&ouml;den werden wieder Verm&ouml;gen. H&ouml;fe werden wieder souver&auml;n.</span>
+      </div>
+    </section>
 
     <section class="story">
       <div class="grid-3">
@@ -223,8 +261,8 @@
         <div class="card">
           <div class="card-label">3 &middot; Der Guide</div>
           <h3>Ground UP GmbH.</h3>
-          <p class="small italic">&bdquo;Wir kennen den Druck, der auf jedem Hof liegt. Deshalb kommen wir aus dem Boden &mdash; nicht aus dem Carbon-Markt.&ldquo;</p>
-          <p class="small">Pilot Berend Kft 2021&ndash;2023 (gemessen, nicht modelliert) &middot; Verra-zertifizierungsf&auml;hig (VM0042 v2.2) &middot; eigener Standard <code>BodenKraft</code> mit l&uuml;ckenlosem digitalem Nachweis (dMRV) &middot; Burgenland Energie als Anchor Customer.</p>
+          <p class="small italic">&bdquo;Wir kennen den Druck, der auf jedem Hof liegt. Wir denken vom Boden her.&ldquo;</p>
+          <p class="small">2-Jahres-Pilot in Mitteleuropa (gemessen, nicht modelliert) &middot; zwei Gro&szlig;kunden in Vertragsanbahnung (Energie und Aviation) &middot; eigener Standard <code>BodenKraft</code> mit l&uuml;ckenlosem digitalem Nachweis &middot; Verra-zertifizierungsf&auml;hig.</p>
         </div>
       </div>
     </section>
@@ -255,7 +293,7 @@
 
     <section class="stack">
       <h2>Der Stack &mdash; vier Schichten, eine Logik.</h2>
-      <p class="small">Jede Schicht ist offen dokumentiert (GitHub) oder als Produkt am Markt. J&oacute;ska sitzt auf OpenAgDB. Token sind die Spitze, nicht das Fundament &mdash; das ist Absicht.</p>
+      <p class="small">Jede Schicht ist offen dokumentiert (GitHub) oder als Produkt am Markt. J&oacute;ska sitzt auf OpenAgDB. Der Standard tr&auml;gt das Fundament, der Token die Spitze &mdash; in dieser Reihenfolge.</p>
 
       <div style="margin-top: 14px;">
         <div class="stack-row">
@@ -265,7 +303,7 @@
               <span class="label">Tokenisierung</span>
               <span class="title">&mdash; BKT &mdash; BodenKraft Token</span>
             </div>
-            <div class="sub">Funding-Vehikel f&uuml;r H&ouml;fe, kein Spekulationsasset. 1 BKT = dokumentierte SOMA-Einheit. Issuance gestuft: BodenKraft-Basis plus Bonus f&uuml;r third-party-zertifizierte H&ouml;fe (z. B. Regenified). Whitepaper iterativ auf GitHub.</div>
+            <div class="sub">Funding-Vehikel f&uuml;r H&ouml;fe, an dokumentierte Bodengesundheit gekoppelt. 1 BKT = eine dokumentierte Humus-Einheit. Issuance gestuft: BodenKraft-Basis plus Bonus f&uuml;r drittzertifizierte H&ouml;fe (z. B. Regenified). Whitepaper iterativ auf GitHub.</div>
           </div>
           <div class="stack-meta">
             <span class="pill gold">Roadmap</span>
@@ -364,41 +402,11 @@
       </div>
 
       <div class="grid-4" style="margin-top: 18px;">
-        <div class="stat"><div class="v success">5.000 t</div><div class="l">CO<sub>2</sub> in 2027 (BE Tranche 1)</div></div>
-        <div class="stat"><div class="v">86 &euro;/t</div><div class="l">Vorzugspreis 5J-Rahmen</div></div>
-        <div class="stat"><div class="v info">33.750 t</div><div class="l">Ziel T2 2029 (Bgld + N&Ouml;)</div></div>
-        <div class="stat"><div class="v">VM0042</div><div class="l">v2.2 &middot; dMRV-konform</div></div>
+        <div class="stat"><div class="v success">3</div><div class="l">parallele Validierungs-Tracks (Pilot &middot; 2 Gro&szlig;kunden anbahnend)</div></div>
+        <div class="stat"><div class="v info">10 &rarr; 1.000</div><div class="l">H&ouml;fe-Skalierungspfad bis 2028</div></div>
+        <div class="stat"><div class="v">0</div><div class="l">Black-Box-Stellen &mdash; alles offen dokumentiert</div></div>
+        <div class="stat"><div class="v">1</div><div class="l">europ&auml;ischer Soil-Standard im Aufbau</div></div>
       </div>
-    </section>
-
-    <section class="tranches">
-      <h2>Tranchen-Pfad bis 2032.</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Tranche</th>
-            <th>Lieferjahr</th>
-            <th>Region</th>
-            <th class="num">Volumen</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="t-success">
-            <td>T1</td><td>2027</td><td>Burgenland (Pilot)</td><td class="num">5.000 t</td><td>Anchor unterzeichnet</td>
-          </tr>
-          <tr class="t-info">
-            <td>T2</td><td>2029</td><td>Bgld + N&Ouml; parallel</td><td class="num">~33.750 t</td><td>in Akquise</td>
-          </tr>
-          <tr>
-            <td>T3</td><td>2030</td><td>Bgld + N&Ouml; + Adopter</td><td class="num">in Planung</td><td>Skalierung</td>
-          </tr>
-          <tr>
-            <td>T4&ndash;T5</td><td>2031&ndash;2032</td><td>AT + EU-Adopter</td><td class="num">in Planung</td><td>Vorkaufsrecht BE</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="small italic" style="margin-top: 10px;">Rechenbasis: 100 ha/Hof &times; 1,59 t/ha/Jahr &times; 2 Jahre Monitoring &times; 85 % Kalibrierung = 270 t/Hof/Zyklus. Konsistent zum Burgenland-Energie-Pitch.</p>
     </section>
 
     <hr class="divider">
@@ -406,17 +414,17 @@
     <section class="cta">
       <div class="grid-cta">
         <div>
-          <div class="meta">Direct Call</div>
-          <h2 style="margin-top: 8px;">Anchor Round offen &mdash; &euro;250k.</h2>
-          <p class="lead">Burgenland Energie ist drin. Ein zweiter Anchor-Slot ist frei &mdash; gleiche Konditionen: Vorzugspreis, regionale Exklusivit&auml;t, Sitz im Lenkungsausschuss, Vorkaufsrecht auf Folgetranchen.</p>
+          <div class="meta">Decision Trigger</div>
+          <h2 style="margin-top: 8px;">Wenn Sie ein Investment mit j&auml;hrlich wachsender Substanz suchen, ist eine Beteiligung an Ground UP die richtige Entscheidung.</h2>
+          <p class="lead">Ticket &euro;5&ndash;10 Mio. Strukturierung im Termsheet (Equity, Wandeldarlehen oder blended). Stack steht, Standard ist gepflegt, Pilot ist gemessen &mdash; jetzt skalieren wir.</p>
           <p style="margin-top: 14px;">
-            <a href="mailto:franz@groundup.farm?subject=Anchor%20Round%20%E2%80%94%20Ground%20UP" class="btn no-print">Anchor-Slot sichern &rarr;</a>
+            <a href="mailto:franz@groundup.farm?subject=Termsheet-Briefing%20%E2%80%94%20Ground%20UP" class="btn no-print">60-Minuten-Termsheet-Briefing in Wien &rarr;</a>
           </p>
         </div>
         <div>
           <div class="meta">Transitional Call</div>
-          <p style="margin-top: 8px;"><strong>60-Minuten-Briefing in Wien.</strong></p>
-          <p class="small">Inkl. Lab-Visit Iglasegasse, Vibrocore-Demo und J&oacute;ska-Live.</p>
+          <p style="margin-top: 8px;"><strong>Wenn ein Briefing zu fr&uuml;h ist:</strong></p>
+          <p class="small">Lab-Visit Iglasegasse, Vibrocore-Demo, J&oacute;ska-Live &mdash; jederzeit auf Anfrage. Whitepaper und Standard offen auf GitHub.</p>
           <p style="margin-top: 8px;">
             <span class="pill info">groundup.farm</span>
             <span class="pill info">bodenkraft.farm</span>
