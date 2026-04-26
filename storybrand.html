@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ground UP &mdash; Investor One-Pager</title>
+  <meta name="description" content="Ground UP GmbH: Wir geben Landwirten ihren Boden zurueck und Investoren einen Markt, der 40 Jahre waechst. Soil Organic Matter Matters.">
+  <meta property="og:title" content="Ground UP - Investor One-Pager">
+  <meta property="og:description" content="SOMA als Bilanzposition. BodenKraft als Standard und Franchise. dMRV als Fundament.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --surface: #f3efe4;
+      --surface-soft: #f7f3e9;
+      --ink: #1a1815;
+      --ink-2: #4d4842;
+      --ink-3: #8a8377;
+      --ink-4: #b8b1a2;
+      --accent: #5d4a2e;
+      --accent-soft: #8a6d3f;
+      --gold: #b08838;
+      --line: #e0d8c4;
+      --line-strong: #c9bfa6;
+      --success: #4a6b3a;
+      --success-bg: #eef2e5;
+      --danger: #8a3d2e;
+      --danger-bg: #f5e8e2;
+      --info: #2e5878;
+      --info-bg: #e6edf3;
+      --radius: 4px;
+      --radius-lg: 8px;
+      --maxw: 920px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    main.page {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 56px 32px 80px;
+    }
+
+    section { margin-bottom: 44px; }
+    section.tight { margin-bottom: 28px; }
+
+    h1, h2, h3 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; color: var(--ink); margin: 0; letter-spacing: -0.01em; }
+    h1 { font-size: 38px; line-height: 1.18; margin-bottom: 14px; }
+    h2 { font-size: 22px; line-height: 1.3; margin-bottom: 12px; }
+    h3 { font-size: 17px; line-height: 1.35; margin-bottom: 6px; font-family: 'Inter', sans-serif; font-weight: 600; }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    em { font-style: italic; color: var(--ink-2); }
+    strong { font-weight: 600; color: var(--ink); }
+    code { font-family: 'JetBrains Mono', SFMono-Regular, Menlo, monospace; font-size: 0.88em; background: var(--surface); padding: 1px 5px; border-radius: 3px; color: var(--ink-2); }
+    a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+    a:hover { color: var(--accent-soft); }
+
+    .meta {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      font-weight: 600;
+    }
+    .lead {
+      font-size: 17px;
+      color: var(--ink-2);
+      line-height: 1.55;
+      max-width: 760px;
+    }
+
+    header.hero { padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+    header.hero .top-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+    .pill { display: inline-block; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--surface); color: var(--accent); border: 1px solid var(--line-strong); letter-spacing: 0.3px; }
+    .pill.gold { background: #f5edd6; border-color: #d8c388; color: #6b4f1a; }
+    .pill.success { background: var(--success-bg); border-color: #c5d4b3; color: var(--success); }
+    .pill.danger { background: var(--danger-bg); border-color: #d8b8ad; color: var(--danger); }
+    .pill.info { background: var(--info-bg); border-color: #b8c8d4; color: var(--info); }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .grid-cta { display: grid; grid-template-columns: 2fr 1fr; gap: 28px; align-items: center; }
+
+    .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 18px; }
+    .card-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px; font-weight: 600; }
+    .card h3 { margin-bottom: 4px; }
+
+    .plan-step { padding-top: 4px; }
+    .plan-step .num { font-family: 'Source Serif 4', Georgia, serif; font-size: 38px; font-weight: 700; color: var(--accent); line-height: 1; letter-spacing: -1px; margin-bottom: 8px; }
+    .plan-step .sub { font-size: 12px; font-weight: 500; color: var(--ink-3); letter-spacing: 0.3px; margin-top: 2px; margin-bottom: 8px; }
+    .plan-step p { font-size: 14px; color: var(--ink-2); line-height: 1.5; }
+
+    .stack-row { display: flex; align-items: stretch; gap: 14px; margin-bottom: 6px; }
+    .stack-bar { padding: 12px 16px; border: 1px solid var(--line-strong); background: var(--surface-soft); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: center; min-height: 64px; }
+    .stack-bar .head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; margin-bottom: 2px; }
+    .stack-bar .tier { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 1px; min-width: 28px; }
+    .stack-bar .label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--ink); }
+    .stack-bar .title { font-size: 13px; color: var(--ink-2); }
+    .stack-bar .sub { font-size: 12.5px; color: var(--ink-3); line-height: 1.45; }
+    .stack-meta { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+    .stack-meta .repo { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .chain { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; margin: 14px 0 16px; }
+    .chain-step { flex: 0 0 auto; padding: 10px 14px; border: 1px solid var(--line-strong); background: var(--surface-soft); border-radius: var(--radius); display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .chain-step.highlight { border-color: var(--accent); background: #f5edd6; }
+    .chain-step .name { font-size: 13px; font-weight: 600; color: var(--ink); }
+    .chain-step .tools { font-size: 12px; color: var(--ink-3); }
+    .chain-arrow { display: flex; align-items: center; color: var(--ink-3); font-size: 18px; flex: 0 0 auto; }
+
+    .callout { padding: 16px 18px; border: 1px solid; border-radius: var(--radius-lg); }
+    .callout h3 { font-size: 14px; margin-bottom: 8px; font-weight: 600; }
+    .callout p { font-size: 13.5px; margin-bottom: 6px; line-height: 1.5; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout.danger { background: var(--danger-bg); border-color: #d8b8ad; }
+    .callout.danger h3 { color: var(--danger); }
+    .callout.success { background: var(--success-bg); border-color: #c5d4b3; }
+    .callout.success h3 { color: var(--success); }
+    .callout.info { background: var(--info-bg); border-color: #b8c8d4; }
+    .callout.info h3 { color: var(--info); }
+    .callout.warm { background: #f5edd6; border-color: #d8c388; }
+    .callout.warm h3 { color: #6b4f1a; }
+
+    .stat { padding: 12px 4px; }
+    .stat .v { font-family: 'Source Serif 4', Georgia, serif; font-size: 26px; font-weight: 700; color: var(--ink); line-height: 1.1; letter-spacing: -0.5px; }
+    .stat .v.success { color: var(--success); }
+    .stat .v.info { color: var(--info); }
+    .stat .l { font-size: 12px; color: var(--ink-3); margin-top: 4px; }
+
+    table { width: 100%; border-collapse: collapse; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; font-size: 13.5px; }
+    th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+    th { background: var(--surface); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--ink-2); }
+    tr:last-child td { border-bottom: 0; }
+    tr.t-success td { background: var(--success-bg); }
+    tr.t-info td { background: var(--info-bg); }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+    .small { font-size: 12.5px; color: var(--ink-3); }
+    .small.italic { font-style: italic; }
+
+    footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--ink-3); display: flex; flex-direction: column; gap: 6px; }
+    footer .row { display: flex; flex-wrap: wrap; gap: 14px; }
+    footer code { font-size: 11.5px; background: transparent; padding: 0; color: var(--ink-3); }
+
+    hr.divider { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }
+
+    @media (max-width: 720px) {
+      main.page { padding: 32px 20px 48px; }
+      h1 { font-size: 28px; }
+      h2 { font-size: 19px; }
+      .grid-3, .grid-2, .grid-4, .grid-cta { grid-template-columns: 1fr; }
+      .stack-row { flex-direction: column; gap: 6px; }
+      .stack-bar { width: 100% !important; }
+      .stack-meta { flex-direction: row; align-items: center; gap: 10px; }
+      .chain { flex-direction: column; }
+      .chain-arrow { transform: rotate(90deg); }
+    }
+
+    @page { size: A4; margin: 14mm; }
+    @media print {
+      :root { --bg: #fff; --surface: #f5f1e8; }
+      body { font-size: 10pt; line-height: 1.4; background: #fff; }
+      main.page { padding: 0; max-width: none; }
+      header.hero { margin-bottom: 16px; padding-bottom: 8px; }
+      h1 { font-size: 22pt; margin-bottom: 8px; }
+      h2 { font-size: 13pt; margin-bottom: 6px; }
+      h3 { font-size: 11pt; }
+      section { margin-bottom: 16px; page-break-inside: avoid; }
+      .card, .callout, .stack-bar, .chain-step { page-break-inside: avoid; }
+      .plan-step .num { font-size: 24pt; }
+      .stat .v { font-size: 18pt; }
+      .lead { font-size: 11pt; }
+      .grid-3, .grid-2, .grid-4 { gap: 12px; }
+      a { color: var(--ink); text-decoration: none; }
+      footer { font-size: 9pt; }
+      .no-print { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <header class="hero">
+      <div class="top-row">
+        <span class="meta">Ground UP GmbH &middot; Investor One-Pager &middot; April 2026</span>
+        <span class="pill gold">Soil Organic Matter Matters</span>
+      </div>
+      <h1>Wir geben Landwirten ihren Boden zur&uuml;ck &mdash;<br>und Investoren einen Markt, der 40 Jahre w&auml;chst.</h1>
+      <p class="lead">SOMA &mdash; Soil Organic Matter &mdash; ist die einzige Bilanzposition, die ein Hof selbst aufbauen kann. Wir machen sie messbar, bewirtschaftbar und monetarisierbar &mdash; in dieser Reihenfolge.</p>
+    </header>
+
+    <section class="story">
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-label">1 &middot; Der Held</div>
+          <h3>Europas Landwirt.</h3>
+          <p class="small">7 Mio. H&ouml;fe f&uuml;ttern den Kontinent &mdash; und stehen am Ende der Wertsch&ouml;pfungskette. Jedes Jahr verliert sein Boden Humus, jedes Jahr steigt seine D&uuml;ngerrechnung, jedes Jahr wird sein Wetter h&auml;rter.</p>
+        </div>
+        <div class="card">
+          <div class="card-label">2 &middot; Das Problem</div>
+          <p class="small"><strong>Extern.</strong> Boden degradiert, Inputs explodieren, Ertr&auml;ge schwanken.</p>
+          <p class="small"><strong>Intern.</strong> Er verliert die Kontrolle &uuml;ber den eigenen Hof.</p>
+          <p class="small"><strong>Philosophisch.</strong> Wer die Welt ern&auml;hrt, sollte nicht der Bittsteller sein.</p>
+        </div>
+        <div class="card">
+          <div class="card-label">3 &middot; Der Guide</div>
+          <h3>Ground UP GmbH.</h3>
+          <p class="small italic">&bdquo;Wir kommen aus dem Boden, nicht aus dem Carbon-Markt.&ldquo;</p>
+          <p class="small">Pilot Berend Kft 2021&ndash;2023 (gemessen, nicht modelliert) &middot; VM0042 v2.2 &middot; eigener Standard <code>BodenKraft</code> mit dMRV &middot; Burgenland Energie als Anchor Customer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan">
+      <h2>Der Plan &mdash; drei Schritte, keine vier.</h2>
+      <div class="grid-3">
+        <div class="plan-step">
+          <div class="num">01</div>
+          <h3>Messen</h3>
+          <div class="sub">Vibrocore &middot; Labor &middot; SOMA</div>
+          <p>Open-Source-Vibrocore f&uuml;r Tiefenproben bis 3 m, akkreditierte Laboranalyse. Ergebnis: dein Boden bekommt zum ersten Mal eine quantifizierte SOMA-Bilanz &mdash; die Grundlage f&uuml;r alles Weitere.</p>
+        </div>
+        <div class="plan-step">
+          <div class="num">02</div>
+          <h3>Bewirtschaften</h3>
+          <div class="sub">OpenAgDB &middot; J&oacute;ska AI &middot; BodenKraft OS</div>
+          <p>Die SOMA-Daten landen in OpenAgDB. J&oacute;ska liest sie und gibt jedem Bauern den n&auml;chsten besten Schritt &mdash; nicht nur Carbon-Bauern. BodenKraft OS (Odoo-FMIS) macht aus Empfehlung gelebte Praxis.</p>
+        </div>
+        <div class="plan-step">
+          <div class="num">03</div>
+          <h3>Monetarisieren</h3>
+          <div class="sub">BodenKraft.farms &middot; .stores &middot; BKT</div>
+          <p>Service-Plattform, Direktvermarktung mit dokumentierter SOMA-Story, optional Carbon-Zertifikate oder BKT-Token. H&ouml;fe mit zus&auml;tzlicher third-party-Zertifizierung (z. B. Regenified) bekommen eigenes Regal-Label und Token-Bonus.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stack">
+      <h2>Der Stack &mdash; vier Schichten, eine Logik.</h2>
+      <p class="small">Jede Schicht ist offen dokumentiert (GitHub) oder als Produkt am Markt. J&oacute;ska sitzt auf OpenAgDB. Token sind die Spitze, nicht das Fundament &mdash; das ist Absicht.</p>
+
+      <div style="margin-top: 14px;">
+        <div class="stack-row">
+          <div class="stack-bar" style="width: 55%;">
+            <div class="head">
+              <span class="tier">04</span>
+              <span class="label">Tokenisierung</span>
+              <span class="title">&mdash; BKT &mdash; BodenKraft Token</span>
+            </div>
+            <div class="sub">Funding-Vehikel f&uuml;r H&ouml;fe, kein Spekulationsasset. 1 BKT = dokumentierte SOMA-Einheit. Issuance gestuft: BodenKraft-Basis plus Bonus f&uuml;r third-party-zertifizierte H&ouml;fe (z. B. Regenified). Whitepaper iterativ auf GitHub.</div>
+          </div>
+          <div class="stack-meta">
+            <span class="pill gold">Roadmap</span>
+            <span class="repo">github.com/GROUNDUP-GmbH/bodenkraft-doc-standard</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-bar" style="width: 70%;">
+            <div class="head">
+              <span class="tier">03</span>
+              <span class="label">Produkte</span>
+              <span class="title">&mdash; BodenKraft OS &middot; .farms &middot; .stores</span>
+            </div>
+            <div class="sub">Odoo-FMIS &middot; Operations Services f&uuml;r H&ouml;fe &middot; Direktvermarktung mit SOMA-Story.</div>
+          </div>
+          <div class="stack-meta">
+            <span class="pill">Live + im Aufbau</span>
+            <span class="repo">Trademark-Linie unter dem BodenKraft-Standard</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-bar" style="width: 85%;">
+            <div class="head">
+              <span class="tier">02</span>
+              <span class="label">Infrastruktur + KI</span>
+              <span class="title">&mdash; Vibrocore + Labor (Messen) &rarr; OpenAgDB (Bewirtschaften)</span>
+            </div>
+            <div class="sub">Open-Source-Vibrocore (DT325) und akkreditiertes Labor liefern SOMA-Werte. OpenAgDB ist das Datenfundament der Bewirtschaftung &mdash; prim&auml;re Quelle f&uuml;r J&oacute;ska, plus Open-API + Premium-Layer f&uuml;r FMIS-Drittanbieter.</div>
+          </div>
+          <div class="stack-meta">
+            <span class="pill">Open Source + Open API</span>
+            <span class="repo">github.com/GROUNDUP-GmbH/vibrocore</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-bar" style="width: 100%;">
+            <div class="head">
+              <span class="tier">01</span>
+              <span class="label">Standard</span>
+              <span class="title">&mdash; BodenKraft Document Standard (dMRV)</span>
+            </div>
+            <div class="sub">ISO-9000-Logik f&uuml;r Soil-Health, dMRV und Agri-Software. Issued by Ground UP. Adopters willkommen.</div>
+          </div>
+          <div class="stack-meta">
+            <span class="pill">Open Spec</span>
+            <span class="repo">github.com/GROUNDUP-GmbH/bodenkraft-doc-standard</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-chain">
+      <h2>Die Veredelung kann zur&uuml;ck zum Hof &mdash; wenn der Bauer richtig w&auml;hlt.</h2>
+      <p class="lead">Heute verl&auml;sst der Wert den Hof, sobald das Korn die Waage verl&auml;sst. Unser Stack dreht den Pfeil um &mdash; aber nur, wenn der Bauer die richtigen Produkte, M&auml;rkte und Kan&auml;le w&auml;hlt. Hier wirken zwei Guides parallel: <strong>J&oacute;ska</strong> beantwortet die strategischen Fragen, <strong>BodenKraft</strong> stellt das sichtbare Franchise-Dach &mdash; rechtlich, marktseitig, im Regal. Der Hof tritt als Gesicht unter diesem Dach auf, nicht als anonymer Zulieferer einer Eigenmarke.</p>
+
+      <div class="chain">
+        <div class="chain-step"><div class="name">Boden</div><div class="tools">Ausgangspunkt</div></div>
+        <div class="chain-arrow">&rarr;</div>
+        <div class="chain-step"><div class="name">Messen</div><div class="tools">Vibrocore + Labor &rarr; SOMA</div></div>
+        <div class="chain-arrow">&rarr;</div>
+        <div class="chain-step"><div class="name">Bewirtschaften</div><div class="tools">OpenAgDB &middot; J&oacute;ska &middot; OS</div></div>
+        <div class="chain-arrow">&rarr;</div>
+        <div class="chain-step highlight"><div class="name">Markt</div><div class="tools">.farms + .stores</div></div>
+      </div>
+
+      <div class="grid-2" style="margin-top: 16px;">
+        <div class="callout info">
+          <h3>J&oacute;ska &mdash; die strategische KI</h3>
+          <p><strong>Produkt.</strong> Welche Frucht, welche Sorte passt zu deinem Boden &mdash; und zu einem Markt mit h&ouml;heren Margen?</p>
+          <p><strong>Markt.</strong> Commodity mit Druck oder Premium-Segment (Bio, regional, SOMA-zertifiziert) mit Aufpreis?</p>
+          <p><strong>Kanal.</strong> Zwischenh&auml;ndler, Genossenschaft, Direktvermarktung &uuml;ber <code>.stores</code> oder kuratiertes B2B &uuml;ber <code>.farms</code>?</p>
+        </div>
+        <div class="callout success">
+          <h3>BodenKraft &mdash; das sichtbare Franchise-Dach</h3>
+          <p><strong>Recht.</strong> Lebensmittelrecht, Hygiene, Etiketten, EU-Bio, Herkunftskennzeichnung &mdash; getragen vom Franchise, nicht vom Einzelhof.</p>
+          <p><strong>Markt-Zugang.</strong> <code>.stores</code> als regionales Franchise-Filialnetz f&uuml;r Direktvermarktung plus B2B-Schnittstellen &uuml;ber <code>.farms</code>.</p>
+          <p><strong>Rollenverteilung.</strong> BodenKraft tr&auml;gt das Dach. Der Hof tr&auml;gt das Gesicht. Beide sichtbar, mit klaren Rollen.</p>
+          <p><strong>Rigor-Tier.</strong> H&ouml;fe mit third-party-Zertifizierung (z. B. Regenified) bekommen eigenes Premium-Label im Regal und erh&ouml;hte BKT-Issuance &mdash; der Stack belohnt nachgewiesene Strenge.</p>
+        </div>
+      </div>
+
+      <p class="small italic" style="margin-top: 14px;">Der Stack liefert die Daten, die Werkzeuge, die Kan&auml;le und die rechtliche Grundlage. Die Entscheidung bleibt beim Landwirt &mdash; aber zum ersten Mal mit dokumentierter Basis und einem Franchise-Dach, das ihm Markt-Zugang gibt, ohne ihn als Eigenmarke zu verschlingen.</p>
+    </section>
+
+    <section class="stakes">
+      <h2>Was auf dem Spiel steht.</h2>
+      <div class="grid-2">
+        <div class="callout danger">
+          <h3>Ohne uns</h3>
+          <p>Boden stirbt weiter. Hof stirbt mit. Bauer bleibt abh&auml;ngig von D&uuml;ngerpreis, F&ouml;rdertopf und Carbon-Markt-Politik. SOMA bleibt unmessbar und nicht-bilanzierbar.</p>
+        </div>
+        <div class="callout success">
+          <h3>Mit uns</h3>
+          <p>Souver&auml;ner Hof. Mehrere Einkommensstr&ouml;me. SOMA als dokumentierte Bilanzposition &mdash; und ein Standard mit dMRV, den die Branche adoptieren kann.</p>
+        </div>
+      </div>
+
+      <div class="grid-4" style="margin-top: 18px;">
+        <div class="stat"><div class="v success">5.000 t</div><div class="l">CO<sub>2</sub> in 2027 (BE Tranche 1)</div></div>
+        <div class="stat"><div class="v">86 &euro;/t</div><div class="l">Vorzugspreis 5J-Rahmen</div></div>
+        <div class="stat"><div class="v info">33.750 t</div><div class="l">Ziel T2 2029 (Bgld + N&Ouml;)</div></div>
+        <div class="stat"><div class="v">VM0042</div><div class="l">v2.2 &middot; dMRV-konform</div></div>
+      </div>
+    </section>
+
+    <section class="tranches">
+      <h2>Tranchen-Pfad bis 2032.</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tranche</th>
+            <th>Lieferjahr</th>
+            <th>Region</th>
+            <th class="num">Volumen</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="t-success">
+            <td>T1</td><td>2027</td><td>Burgenland (Pilot)</td><td class="num">5.000 t</td><td>Anchor unterzeichnet</td>
+          </tr>
+          <tr class="t-info">
+            <td>T2</td><td>2029</td><td>Bgld + N&Ouml; parallel</td><td class="num">~33.750 t</td><td>in Akquise</td>
+          </tr>
+          <tr>
+            <td>T3</td><td>2030</td><td>Bgld + N&Ouml; + Adopter</td><td class="num">in Planung</td><td>Skalierung</td>
+          </tr>
+          <tr>
+            <td>T4&ndash;T5</td><td>2031&ndash;2032</td><td>AT + EU-Adopter</td><td class="num">in Planung</td><td>Vorkaufsrecht BE</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="small italic" style="margin-top: 10px;">Rechenbasis: 100 ha/Hof &times; 1,59 t/ha/Jahr &times; 2 Jahre Monitoring &times; 85 % Kalibrierung = 270 t/Hof/Zyklus. Konsistent zum Burgenland-Energie-Pitch.</p>
+    </section>
+
+    <hr class="divider">
+
+    <section class="cta">
+      <div class="grid-cta">
+        <div>
+          <div class="meta">Direct Call</div>
+          <h2 style="margin-top: 8px;">Anchor Round offen &mdash; &euro;250k.</h2>
+          <p class="lead">Burgenland Energie ist drin. Ein zweiter Anchor-Slot ist frei &mdash; gleiche Konditionen: Vorzugspreis, regionale Exklusivit&auml;t, Sitz im Lenkungsausschuss, Vorkaufsrecht auf Folgetranchen.</p>
+        </div>
+        <div>
+          <div class="meta">Transitional Call</div>
+          <p style="margin-top: 8px;"><strong>60-Minuten-Briefing in Wien.</strong></p>
+          <p class="small">Inkl. Lab-Visit Iglasegasse, Vibrocore-Demo und J&oacute;ska-Live.</p>
+          <p style="margin-top: 8px;">
+            <span class="pill info">groundup.farm</span>
+            <span class="pill info">bodenkraft.farm</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row">
+        <span>Ground UP GmbH &middot; Iglasegasse 21&ndash;23 &middot; 1190 Wien</span>
+        <span>FN 481220 b &middot; UID ATU72805734</span>
+      </div>
+      <div class="row">
+        <span>Standard: <code>did:web:bodenkraft.farm</code></span>
+        <span>Issuer: <code>did:web:groundup.farm:issuer:groundup</code></span>
+        <span><a href="https://github.com/GROUNDUP-GmbH">github.com/GROUNDUP-GmbH</a></span>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
