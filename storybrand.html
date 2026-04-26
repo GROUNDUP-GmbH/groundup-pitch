@@ -102,9 +102,15 @@
     .card h3 { margin-bottom: 4px; }
 
     .plan-step { padding-top: 4px; }
-    .plan-step .num { font-family: 'Source Serif 4', Georgia, serif; font-size: 38px; font-weight: 700; color: var(--accent); line-height: 1; letter-spacing: -1px; margin-bottom: 8px; }
-    .plan-step .sub { font-size: 12px; font-weight: 500; color: var(--ink-3); letter-spacing: 0.3px; margin-top: 2px; margin-bottom: 8px; }
-    .plan-step p { font-size: 14px; color: var(--ink-2); line-height: 1.5; }
+    .plan-step .num { font-family: 'Source Serif 4', Georgia, serif; font-size: 38px; font-weight: 700; color: var(--accent); line-height: 1; letter-spacing: -1px; margin-bottom: 4px; }
+    .plan-step .step-tag { font-size: 11px; font-weight: 600; color: var(--ink-3); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+    .plan-step h3 { font-family: 'Source Serif 4', Georgia, serif; font-size: 19px; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: 8px; letter-spacing: -0.01em; }
+    .plan-step p { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; margin-bottom: 6px; }
+    .plan-step .tools { font-size: 12px; color: var(--ink-3); font-style: italic; margin-top: 2px; }
+
+    .pull { margin: 28px 0; padding: 24px 28px; border-left: 3px solid var(--accent); background: var(--surface-soft); }
+    .pull p { font-family: 'Source Serif 4', Georgia, serif; font-size: 22px; line-height: 1.35; color: var(--ink); font-weight: 600; letter-spacing: -0.01em; margin: 0; }
+    @media print { .pull { padding: 14px 18px; margin: 14px 0; } .pull p { font-size: 13pt; } }
 
     .stack-row { display: flex; align-items: stretch; gap: 14px; margin-bottom: 6px; }
     .stack-bar { padding: 12px 16px; border: 1px solid var(--line-strong); background: var(--surface-soft); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: center; min-height: 64px; }
@@ -156,20 +162,6 @@
     .btn { display: inline-block; padding: 10px 18px; background: var(--accent); color: #fff !important; text-decoration: none; border-radius: var(--radius); font-weight: 600; font-size: 14px; letter-spacing: 0.2px; border: 1px solid var(--accent); transition: background 0.15s ease; }
     .btn:hover { background: var(--accent-soft); border-color: var(--accent-soft); color: #fff !important; }
 
-    .peace { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 36px; }
-    .peace .step { padding: 18px 16px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; min-height: 110px; }
-    .peace .step:last-child { border-right: 0; }
-    .peace .step .tag { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
-    .peace .step .line { font-family: 'Source Serif 4', Georgia, serif; font-size: 15px; line-height: 1.35; color: var(--ink); font-weight: 600; letter-spacing: -0.01em; }
-    @media (max-width: 720px) {
-      .peace { grid-template-columns: 1fr; }
-      .peace .step { border-right: 0; border-bottom: 1px solid var(--line); min-height: auto; }
-      .peace .step:last-child { border-bottom: 0; }
-    }
-    @media print {
-      .peace .step { padding: 10px 12px; min-height: auto; }
-      .peace .step .line { font-size: 11pt; }
-    }
 
     footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--ink-3); display: flex; flex-direction: column; gap: 6px; }
     footer .row { display: flex; flex-wrap: wrap; gap: 14px; }
@@ -222,74 +214,53 @@
       <p class="lead">Lebendiger Boden ist die einzige Bilanzposition, die ein Hof selbst aufbaut. Wir machen ihn messbar, bewirtschaftbar und verk&auml;uflich &mdash; und bauen daraus eine neue Anlageklasse f&uuml;r Europa.</p>
     </header>
 
-    <section class="peace" aria-label="F&uuml;nf Stufen: Die Geschichte in einem Atemzug">
-      <div class="step">
-        <span class="tag">Problem</span>
-        <span class="line">Boden tr&auml;gt Europa. Niemand bilanziert ihn.</span>
-      </div>
-      <div class="step">
-        <span class="tag">Empathie</span>
-        <span class="line">Wer die Welt ern&auml;hrt, sollte nicht der Bittsteller sein.</span>
-      </div>
-      <div class="step">
-        <span class="tag">Antwort</span>
-        <span class="line">Ground UP macht lebendigen Boden messbar, bewirtschaftbar und verk&auml;uflich.</span>
-      </div>
-      <div class="step">
-        <span class="tag">Wandel</span>
-        <span class="line">Sie investieren in eine Anlage, die ein Hof selbst aufbaut.</span>
-      </div>
-      <div class="step">
-        <span class="tag">Ergebnis</span>
-        <span class="line">B&ouml;den werden wieder Verm&ouml;gen. H&ouml;fe werden wieder souver&auml;n.</span>
-      </div>
-    </section>
-
     <section class="story">
-      <div class="grid-3">
+      <h2>Boden tr&auml;gt Europa. Niemand bilanziert ihn.</h2>
+      <div class="grid-2" style="margin-top: 16px;">
         <div class="card">
-          <div class="card-label">1 &middot; Der Held</div>
-          <h3>Europas Landwirt.</h3>
-          <p class="small">7 Mio. H&ouml;fe f&uuml;ttern den Kontinent &mdash; und stehen am Ende der Wertsch&ouml;pfungskette. Jedes Jahr verliert sein Boden Humus, jedes Jahr steigt seine D&uuml;ngerrechnung, jedes Jahr wird sein Wetter h&auml;rter.</p>
-        </div>
-        <div class="card">
-          <div class="card-label">2 &middot; Das Problem</div>
-          <p class="small"><strong>Extern.</strong> Boden degradiert, Inputs explodieren, Ertr&auml;ge schwanken.</p>
-          <p class="small"><strong>Intern.</strong> Er verliert die Kontrolle &uuml;ber den eigenen Hof.</p>
+          <div class="card-label">Das Problem</div>
+          <p class="small"><strong>Extern.</strong> Boden degradiert, Inputs explodieren.</p>
+          <p class="small"><strong>Intern.</strong> Die Kontrolle entgleitet.</p>
           <p class="small"><strong>Philosophisch.</strong> Wer die Welt ern&auml;hrt, sollte nicht der Bittsteller sein.</p>
         </div>
         <div class="card">
-          <div class="card-label">3 &middot; Der Guide</div>
-          <h3>Ground UP GmbH.</h3>
-          <p class="small italic">&bdquo;Wir kennen den Druck, der auf jedem Hof liegt. Wir denken vom Boden her.&ldquo;</p>
-          <p class="small">2-Jahres-Pilot in Mitteleuropa (gemessen, nicht modelliert) &middot; zwei Gro&szlig;kunden in Vertragsanbahnung (Energie und Aviation) &middot; eigener Standard <code>BodenKraft</code> mit l&uuml;ckenlosem digitalem Nachweis &middot; Verra-zertifizierungsf&auml;hig.</p>
+          <div class="card-label">Der Guide</div>
+          <p class="small italic" style="margin-bottom: 8px;">&bdquo;Wir kennen den Druck, der auf jedem Hof liegt. Wir denken vom Boden her.&ldquo;</p>
+          <p class="small">2-Jahres-Pilot in Mitteleuropa, gemessen. Zwei Gro&szlig;kunden in Vertragsanbahnung (Energie, Aviation). Eigener Standard <code>BodenKraft</code> mit l&uuml;ckenlosem digitalem Nachweis. Verra-zertifizierungsf&auml;hig.</p>
         </div>
       </div>
     </section>
 
     <section class="plan">
-      <h2>Der Plan &mdash; drei Schritte, keine vier.</h2>
+      <h2>Der Plan &mdash; drei Schritte.</h2>
       <div class="grid-3">
         <div class="plan-step">
           <div class="num">01</div>
-          <h3>Messen</h3>
-          <div class="sub">Du wei&szlig;t, was im Boden steckt.</div>
-          <p>Unser Soil-Analytics-Modell <strong>SOMA</strong> (Soil Organic Matter Analytics) plant die Probenpunkte und prognostiziert SOC f&uuml;r jeden Hektar. Der Open-Source-Bohrer <em>Vibrocore</em> liefert die echten Tiefenproben, das akkreditierte Labor die Werte. SOMA kalibriert daraus die Humus-Bilanz &mdash; gemessen <em>und</em> prognostiziert.</p>
+          <div class="step-tag">Messen</div>
+          <h3>Du wei&szlig;t, was im Boden steckt.</h3>
+          <p>SOMA plant die Probenpunkte, Vibrocore und Labor liefern die Werte. Erstmals eine Humus-Bilanz pro Hektar.</p>
+          <p class="tools">SOMA &middot; Vibrocore &middot; Labor</p>
         </div>
         <div class="plan-step">
           <div class="num">02</div>
-          <h3>Bewirtschaften</h3>
-          <div class="sub">Du wei&szlig;t, was als N&auml;chstes zu tun ist.</div>
-          <p>Die kalibrierten Daten landen in der offenen Daten-Plattform <em>OpenAgDB</em>. <strong>J&oacute;ska</strong>, der pers&ouml;nliche KI-Berater, liest sie und schl&auml;gt jedem Hof den n&auml;chsten besten Schritt vor. <em>BodenKraft OS</em> &mdash; das Hof-Betriebssystem &mdash; macht aus der Empfehlung gelebte Praxis.</p>
+          <div class="step-tag">Bewirtschaften</div>
+          <h3>Du wei&szlig;t, was als N&auml;chstes zu tun ist.</h3>
+          <p>J&oacute;ska liest die Daten und schl&auml;gt den n&auml;chsten Schritt vor. BodenKraft OS macht Empfehlung zur Praxis.</p>
+          <p class="tools">OpenAgDB &middot; J&oacute;ska &middot; BodenKraft OS</p>
         </div>
         <div class="plan-step">
           <div class="num">03</div>
-          <h3>Monetarisieren</h3>
-          <div class="sub">Du verkaufst direkt &mdash; mit Beweis.</div>
-          <p>Eigenes Regal &uuml;ber <em>BodenKraft.stores</em>, B2B &uuml;ber <em>.farms</em>, optional Carbon-Erl&ouml;se oder <em>BodenKraft Token</em> (BKT). H&ouml;fe mit Drittzertifizierung (z. B. Regenified) bekommen eigenes Premium-Label im Regal und einen Token-Bonus.</p>
+          <div class="step-tag">Monetarisieren</div>
+          <h3>Du verkaufst direkt &mdash; mit Beweis.</h3>
+          <p>Eigenes Regal, dokumentierte Hof-Story, optional Token. Drittzertifizierung bringt Premium-Label und Token-Bonus.</p>
+          <p class="tools">BodenKraft.stores &middot; .farms &middot; BKT</p>
         </div>
       </div>
     </section>
+
+    <div class="pull">
+      <p>Sie investieren in eine Anlage, die ein Hof selbst aufbaut.</p>
+    </div>
 
     <section class="stack">
       <h2>Der Stack &mdash; vier Schichten, eine Logik.</h2>
@@ -303,7 +274,7 @@
               <span class="label">Tokenisierung</span>
               <span class="title">&mdash; BKT &mdash; BodenKraft Token</span>
             </div>
-            <div class="sub">Funding-Vehikel f&uuml;r H&ouml;fe, an dokumentierte Bodengesundheit gekoppelt. 1 BKT = eine dokumentierte Humus-Einheit. Issuance gestuft: BodenKraft-Basis plus Bonus f&uuml;r drittzertifizierte H&ouml;fe (z. B. Regenified). Whitepaper iterativ auf GitHub.</div>
+            <div class="sub">1 BKT = eine dokumentierte Humus-Einheit. Funding-Vehikel f&uuml;r H&ouml;fe, an Bodengesundheit gekoppelt.</div>
           </div>
           <div class="stack-meta">
             <span class="pill gold">Roadmap</span>
@@ -317,7 +288,7 @@
               <span class="label">Produkte</span>
               <span class="title">&mdash; BodenKraft OS &middot; .farms &middot; .stores</span>
             </div>
-            <div class="sub">Hof-Betriebssystem auf Odoo-Basis &middot; Operations Services f&uuml;r H&ouml;fe &middot; Direktvermarktung mit dokumentierter Hof-Story.</div>
+            <div class="sub">Hof-Betriebssystem &middot; Operations Services &middot; Direktvermarktung mit dokumentierter Hof-Story.</div>
           </div>
           <div class="stack-meta">
             <span class="pill">Live + im Aufbau</span>
@@ -329,9 +300,9 @@
             <div class="head">
               <span class="tier">02</span>
               <span class="label">Daten + KI</span>
-              <span class="title">&mdash; SOMA + Vibrocore + Labor (Messen) &rarr; OpenAgDB &amp; J&oacute;ska (Bewirtschaften)</span>
+              <span class="title">&mdash; SOMA + Vibrocore + Labor &rarr; OpenAgDB + J&oacute;ska</span>
             </div>
-            <div class="sub">SOMA ist der pr&auml;diktive Motor: Digital Soil Mapping aus Sentinel-2, ERA5-Land, SoilGrids und 26.000 LUCAS-Proben &mdash; plant Probenpunkte und prognostiziert SOC. Vibrocore + Labor liefern die Realwerte; SOMA kalibriert daraus die Humus-Bilanz. Die kalibrierten Daten flie&szlig;en in OpenAgDB &mdash; offene Daten-Plattform mit Premium-Layer f&uuml;r Drittanbieter, prim&auml;re Quelle f&uuml;r J&oacute;ska.</div>
+            <div class="sub">SOMA prognostiziert, Vibrocore misst, Labor analysiert. OpenAgDB sammelt, J&oacute;ska zieht den Schluss.</div>
           </div>
           <div class="stack-meta">
             <span class="pill">Open Source + Open API</span>
@@ -345,7 +316,7 @@
               <span class="label">Standard</span>
               <span class="title">&mdash; BodenKraft Document Standard (dMRV)</span>
             </div>
-            <div class="sub">ISO-9000-Logik f&uuml;r Soil-Health, dMRV und Agri-Software. Issued by Ground UP. Adopters willkommen.</div>
+            <div class="sub">ISO-9000-Logik f&uuml;r Soil-Health und dMRV. Issued by Ground UP. Adopters willkommen.</div>
           </div>
           <div class="stack-meta">
             <span class="pill">Open Spec</span>
@@ -357,47 +328,29 @@
 
     <section class="value-chain">
       <h2>Die Wertsch&ouml;pfung geh&ouml;rt zur&uuml;ck auf den Hof.</h2>
-      <p class="lead">Heute verl&auml;sst der Wert den Hof, sobald das Korn die Waage verl&auml;sst. Unser Stack dreht den Pfeil um &mdash; vorausgesetzt, der Bauer w&auml;hlt die richtigen Produkte, M&auml;rkte und Kan&auml;le. Daf&uuml;r wirken zwei Guides parallel: <strong>J&oacute;ska</strong> beantwortet die strategischen Fragen, <strong>BodenKraft</strong> stellt das sichtbare Franchise-Dach &mdash; rechtlich, marktseitig, im Regal. Der Hof tritt als Gesicht unter diesem Dach auf, nicht als anonymer Zulieferer einer Eigenmarke.</p>
+      <p class="lead">Heute verl&auml;sst der Wert den Hof, sobald das Korn die Waage verl&auml;sst. Wir drehen den Pfeil um. <strong>J&oacute;ska</strong> liefert die Strategie, <strong>BodenKraft</strong> das sichtbare Franchise-Dach &mdash; rechtlich, marktseitig, im Regal.</p>
 
       <div class="chain">
-        <div class="chain-step"><div class="name">Boden</div><div class="tools">Ausgangspunkt</div></div>
+        <div class="chain-step"><div class="name">Boden</div></div>
         <div class="chain-arrow">&rarr;</div>
-        <div class="chain-step"><div class="name">Messen</div><div class="tools">Vibrocore + Labor &rarr; SOMA</div></div>
+        <div class="chain-step"><div class="name">Messen</div><div class="tools">SOMA &middot; Vibrocore</div></div>
         <div class="chain-arrow">&rarr;</div>
-        <div class="chain-step"><div class="name">Bewirtschaften</div><div class="tools">OpenAgDB &middot; J&oacute;ska &middot; OS</div></div>
+        <div class="chain-step"><div class="name">Bewirtschaften</div><div class="tools">J&oacute;ska &middot; OS</div></div>
         <div class="chain-arrow">&rarr;</div>
-        <div class="chain-step highlight"><div class="name">Markt</div><div class="tools">.farms + .stores</div></div>
+        <div class="chain-step highlight"><div class="name">Markt</div><div class="tools">.farms &middot; .stores</div></div>
       </div>
-
-      <div class="grid-2" style="margin-top: 16px;">
-        <div class="callout info">
-          <h3>J&oacute;ska &mdash; die strategische KI</h3>
-          <p><strong>Produkt.</strong> Welche Frucht, welche Sorte passt zu deinem Boden &mdash; und zu einem Markt mit h&ouml;heren Margen?</p>
-          <p><strong>Markt.</strong> Commodity mit Druck oder Premium-Segment (Bio, regional, SOMA-zertifiziert) mit Aufpreis?</p>
-          <p><strong>Kanal.</strong> Zwischenh&auml;ndler, Genossenschaft, Direktvermarktung &uuml;ber <code>.stores</code> oder kuratiertes B2B &uuml;ber <code>.farms</code>?</p>
-        </div>
-        <div class="callout success">
-          <h3>BodenKraft &mdash; das sichtbare Franchise-Dach</h3>
-          <p><strong>Recht.</strong> Lebensmittelrecht, Hygiene, Etiketten, EU-Bio, Herkunftskennzeichnung &mdash; getragen vom Franchise, nicht vom Einzelhof.</p>
-          <p><strong>Markt-Zugang.</strong> <code>.stores</code> als regionales Franchise-Filialnetz f&uuml;r Direktvermarktung plus B2B-Schnittstellen &uuml;ber <code>.farms</code>.</p>
-          <p><strong>Rollenverteilung.</strong> BodenKraft tr&auml;gt das Dach. Der Hof tr&auml;gt das Gesicht. Beide sichtbar, mit klaren Rollen.</p>
-          <p><strong>Rigor-Tier.</strong> H&ouml;fe mit third-party-Zertifizierung (z. B. Regenified) bekommen eigenes Premium-Label im Regal und erh&ouml;hte BKT-Issuance &mdash; der Stack belohnt nachgewiesene Strenge.</p>
-        </div>
-      </div>
-
-      <p class="small italic" style="margin-top: 14px;">Der Stack liefert die Daten, die Werkzeuge, die Kan&auml;le und die rechtliche Grundlage. Die Entscheidung bleibt beim Landwirt &mdash; aber zum ersten Mal mit dokumentierter Basis und einem Franchise-Dach, das ihm Markt-Zugang gibt, ohne ihn als Eigenmarke zu verschlingen.</p>
     </section>
 
     <section class="stakes">
-      <h2>Was auf dem Spiel steht.</h2>
-      <div class="grid-2">
+      <h2>B&ouml;den werden wieder Verm&ouml;gen. H&ouml;fe werden wieder souver&auml;n.</h2>
+      <div class="grid-2" style="margin-top: 14px;">
         <div class="callout danger">
           <h3>Ohne uns</h3>
-          <p>Boden stirbt weiter. Hof stirbt mit. Der Bauer bleibt abh&auml;ngig von D&uuml;ngerpreis, F&ouml;rdertopf und Carbon-Politik. Lebendiger Boden bleibt unmessbar &mdash; und damit nicht-bilanzierbar.</p>
+          <p>Boden stirbt weiter. Hof stirbt mit. Lebendiger Boden bleibt unmessbar und damit nicht-bilanzierbar.</p>
         </div>
         <div class="callout success">
           <h3>Mit uns</h3>
-          <p>Souver&auml;ner Hof. Mehrere Einkommensstr&ouml;me. Lebendiger Boden in der Bilanz &mdash; und ein offener Standard mit lückenlosem digitalem Nachweis, den die Branche adoptieren kann.</p>
+          <p>Souver&auml;ner Hof. Mehrere Einkommensstr&ouml;me. Lebendiger Boden in der Bilanz. Ein offener Standard, den die Branche adoptieren kann.</p>
         </div>
       </div>
 
@@ -415,16 +368,15 @@
       <div class="grid-cta">
         <div>
           <div class="meta">Decision Trigger</div>
-          <h2 style="margin-top: 8px;">Wenn Sie ein Investment mit j&auml;hrlich wachsender Substanz suchen, ist eine Beteiligung an Ground UP die richtige Entscheidung.</h2>
-          <p class="lead">Ticket &euro;5&ndash;10 Mio. Strukturierung im Termsheet (Equity, Wandeldarlehen oder blended). Stack steht, Standard ist gepflegt, Pilot ist gemessen &mdash; jetzt skalieren wir.</p>
+          <h2 style="margin-top: 8px;">Wer in Substanz investiert, kommt zu Ground UP.</h2>
+          <p class="lead">Ticket &euro;5&ndash;10 Mio. Stack steht. Standard ist gepflegt. Pilot ist gemessen.</p>
           <p style="margin-top: 14px;">
-            <a href="mailto:franz@groundup.farm?subject=Termsheet-Briefing%20%E2%80%94%20Ground%20UP" class="btn no-print">60-Minuten-Termsheet-Briefing in Wien &rarr;</a>
+            <a href="mailto:franz@groundup.farm?subject=Termsheet-Briefing%20%E2%80%94%20Ground%20UP" class="btn no-print">60-Minuten-Briefing in Wien &rarr;</a>
           </p>
         </div>
         <div>
-          <div class="meta">Transitional Call</div>
-          <p style="margin-top: 8px;"><strong>Wenn ein Briefing zu fr&uuml;h ist:</strong></p>
-          <p class="small">Lab-Visit Iglasegasse, Vibrocore-Demo, J&oacute;ska-Live &mdash; jederzeit auf Anfrage. Whitepaper und Standard offen auf GitHub.</p>
+          <div class="meta">Mehr sehen</div>
+          <p class="small" style="margin-top: 8px;">Lab-Visit, Vibrocore-Demo, J&oacute;ska-Live &mdash; auf Anfrage. Standard und Whitepaper offen auf GitHub.</p>
           <p style="margin-top: 8px;">
             <span class="pill info">groundup.farm</span>
             <span class="pill info">bodenkraft.farm</span>
